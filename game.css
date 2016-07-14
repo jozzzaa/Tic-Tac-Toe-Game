@@ -1,0 +1,197 @@
+/*GENERAL BODY STYLING*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: red;*/
+  margin: 0;
+  padding: 0;
+}
+
+/*CONTAINER AND PAGE STYLING*/
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+
+#scene {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  paddding: 0;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+}
+
+#bg {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#bg > img {
+  background: url(Backgrounds/background-1.png) no-repeat 100% 100%;
+  bottom: -200px;
+  /*background-size: cover;*/
+  position: absolute;
+  height: 180%;
+  /*width: 100%;*/
+  left: -30%;
+  top: -60%;
+}
+
+
+.wrapper {
+  width: 600px;
+  /*background-color: black;*/
+  height: 90%;
+  overflow: hidden;
+  position: absolute;
+  left: calc(50% - 300px);
+  top: 5%;
+  z-index: 10;
+
+}
+
+/*HEADER STYLING*/
+
+header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+header > img {
+  width: 350px;
+}
+
+
+
+/*CANVAS AND BOARD STYLING*/
+
+.canvas {
+  /*background-color: plum;*/
+  width: 550px;
+  height: 550px;
+  border: 35px solid rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  /*border-radius: 20px 20px 0px 0px;*/
+  border-radius: 20px 20px 20px 20px;
+}
+
+.box {
+  float: left;
+  border: 1px solid green;
+  padding: 0;
+  background-color: #7bbe11;
+  /*border-radius: 5px;
+  border: 10px solid rgba(255, 255, 255, 0.5);*/
+}
+
+.box:hover {
+  background-color: #a3ce0d;
+}
+
+/*FOOTER / GAME STATS*/
+
+.gameStats {
+  width: 100%;
+  /*height: 100px;*/
+  /*background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 20px 20px;
+  padding: 0px 35px 35px 35px;*/
+  padding: 0px 20px 0px 20px;
+}
+
+.playerStats {
+  display: block;
+  width: 48%;
+  height: 120px;
+  float: left;
+
+  background: #3487c7;
+  background: -webkit-linear-gradient(left top, #3487c7, #15619b);
+  background: -o-linear-gradient(bottom right, #3487c7, #15619b);
+  background: -moz-linear-gradient(bottom right, #3487c7, #15619b);
+  background: linear-gradient(to bottom right, #3487c7, #15619b);
+
+  border: 3px solid #166098;
+  border-radius: 20px;
+  margin: 5px 5px 5px 5px;
+  padding: 20px;
+}
+
+.player {
+  width: 100%;
+  height: 40%;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #15619b;
+}
+
+.player > h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: #e0e0e0;
+}
+
+.stars {
+  width: 100%;
+  height: 60%;
+  margin-top: 5px;
+}
+
+.stars > img {
+  height: 100%;
+  padding: 10px 5px 0px 5px;
+}
+
+.player > h3 {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///
