@@ -6,7 +6,10 @@
   <link rel="stylesheet" href="game.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700' rel='stylesheet' type='text/css'>
 </head>
+
   <body>
+
+    <img src="images/refresh.png" alt="" id="refresh">
 
     <div id="container" class="container">
 
@@ -22,24 +25,24 @@
 
         <div class="gameStats">
 
-          <div class="playerStats">
+          <div class="playerStats" id="player1">
             <div class="player">
               <h3>Player 1</h3>
             </div>
             <div class="stars">
               <img src="images/star-icon-blank.png" alt="">
-              <img src="images/star-icon-blank.png" alt="">
+              <img id="midStar" src="images/star-icon-blank.png" alt="">
               <img src="images/star-icon-blank.png" alt="">
             </div>
           </div>
 
-          <div class="playerStats">
+          <div class="playerStats" id="player2">
             <div class="player">
               <h3>Player 2</h3>
             </div>
             <div class="stars">
               <img src="images/star-icon-blank.png" alt="">
-              <img src="images/star-icon-blank.png" alt="">
+              <img id="midStar" src="images/star-icon-blank.png" alt="">
               <img src="images/star-icon-blank.png" alt="">
             </div>
           </div>
@@ -50,11 +53,6 @@
 
       <ul id="scene" class="scene">
 
-        <!-- <li class="layer" id="bg" data-depth="1.00"><img src="Backgrounds/bg-layer1.png"></li>
-        <li class="layer" id="bg" data-depth="1.00"><img src="Backgrounds/bg-layer2.png"></li>
-        <li class="layer" id="bg" data-depth="0.80"><img src="Backgrounds/bg-layer3.png"></li>
-        <li class="layer" id="bg" data-depth="0.60"><img src="Backgrounds/bg-layer4.png"></li>
-        <li class="layer" id="bg" data-depth="0.40"><img src="Backgrounds/bg-layer5.png"></li> -->
         <li class="layer" id="bg" data-depth="1.00"><img src="Backgrounds/bg-layer6.png"></li>
 
       </ul>
@@ -67,27 +65,19 @@
     var scene = document.getElementById('scene');
     var scene = document.getElementById('scene');
     var parallax = new Parallax(scene, {
-      // calibrateX: false,
-      // calibrateY: true,
-      // invertX: false,
-      // invertY: true,
-      // limitX: 10,
-      // limitY: 10,
       scalarX: 2,
       scalarY: 2,
-      // frictionX: 0.2,
-      // frictionY: 0.8,
       originX: 0.5,
       originY: 0.5
     });
     </script>
-
-
 
     </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/game.js"></script>
+
   </body>
+
 </html>
