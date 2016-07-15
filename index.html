@@ -2,14 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Play Tic Tac Toe</title>
+  <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,300italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link rel="icon"
+      type="image/png"
+      href="images/Favicon.png">
 </head>
-<body>
 
-  <h1>Tic Tac Toe</h1>
-  <button href="game.html"><a href="">Play</a></button>
+  <body>
 
-  <script src="app.js"></script>
-</body>
+    <img src="images/refresh.png" alt="" id="refresh">
+
+    <div class="announcementHolderX">
+      <div class="winnerAnnouncement">
+        <img src="images/star-icon-fill.png" alt="">
+        <h3>CONGRATULATIONS!</h3>
+        <p id='xWins'>Player 1 Wins with X's</p>
+      </div>
+    </div>
+
+    <div class="announcementHolder0">
+      <div class="winnerAnnouncement">
+        <img src="images/star-icon-fill.png" alt="">
+        <h3>CONGRATULATIONS!</h3>
+        <p id='oWins'>Player 2 Wins with O's</p>
+      </div>
+    </div>
+
+    <div class="announcementHolderD">
+      <div class="winnerAnnouncement">
+        <img src="images/star-icon-fill.png" alt="">
+        <h3>UH OH!</h3>
+        <p>Neigher of you won, we have a stalemate</p>
+      </div>
+    </div>
+
+    <div id="container" class="container">
+
+      <div class="wrapper">
+
+        <header>
+          <img src="images/logo.png" alt="">
+        </header>
+
+        <div class="wrapperIntro">
+          <h1></h1>
+          <p>The object of Tic Tac Toe is to get three in a row. The standard format for gameplay is based on a three by three game board. But, because mine is awesome, you can play a grid as large as you want. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either opponent has three in a row or all nine squares are filled. If no one achieve 3 in a row, the stalemate is called a cat game.
+          </p>
+          <input type="text" class="boardSize" placeholder="What size board would you like to play? e.g. 3, 4, 5" >
+          <input type="text" class="Player1Name" placeholder="What is the name of Player 1 ?">
+          <input type="text" class="Player2Name" placeholder="What is the name of Player 2 ?">
+          <button class="playNow">Play Now</button>
+        </div>
+
+        <div class="canvas">
+
+        </div>
+
+        <div class="gameStats">
+
+          <div class="playerStats" id="player1">
+            <div class="player">
+              <h3>Player 1</h3>
+            </div>
+            <div class="stars">
+              <img src="images/star-icon-blank.png" alt="">
+              <img id="midStar" src="images/star-icon-blank.png" alt="">
+              <img src="images/star-icon-blank.png" alt="">
+            </div>
+          </div>
+
+          <div class="playerStats" id="player2">
+            <div class="player">
+              <h3>Player 2</h3>
+            </div>
+            <div class="stars">
+              <img src="images/star-icon-blank.png" alt="">
+              <img id="midStar" src="images/star-icon-blank.png" alt="">
+              <img src="images/star-icon-blank.png" alt="">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <ul id="scene" class="scene">
+
+        <li class="layer" id="bg" data-depth="1.00"><img src="Backgrounds/bg-layer6.png"></li>
+
+      </ul>
+
+    </div>
+
+    <script src="js/parallax.min.js"></script>
+    <script>
+
+    var scene = document.getElementById('scene');
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene, {
+      scalarX: 2,
+      scalarY: 2,
+      originX: 0.5,
+      originY: 0.5
+    });
+    </script>
+
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/game.js"></script>
+
+  </body>
+
 </html>

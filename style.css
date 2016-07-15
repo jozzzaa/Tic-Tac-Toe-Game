@@ -1,0 +1,365 @@
+* {
+  -moz-box-sizing    : border-box;
+  -webkit-box-sizing : border-box;
+  box-sizing         : border-box;
+  font-family        : 'Roboto',
+                       sans-serif;
+}
+
+html {
+  width  : 100%;
+  height : 100%;
+}
+
+body {
+  display         : flex;
+  width           : 100%;
+  height          : 100%;
+  margin          : 0;
+  padding         : 0;
+  overflow        : hidden;
+  align-items     : center;
+  justify-content : center;
+}
+
+#container {
+  width      : 100%;
+  height     : 100%;
+  margin     : 0 auto;
+  padding    : 0;
+  overflow   : hidden;
+  text-align : center;
+}
+
+#scene {
+  width      : 100%;
+  height     : 100%;
+  margin     : 0;
+  text-align : center;
+}
+
+#bg {
+  width      : 100%;
+  height     : 100%;
+  text-align : center;
+}
+
+#bg > img {
+  position   : absolute;
+  top        : -60%;
+  bottom     : -200px;
+  left       : -30%;
+  height     : 180%;
+  background : url(Backgrounds/background-1.png) no-repeat 100% 100%;
+}
+
+.wrapper {
+  z-index  : 10;
+  position : absolute;
+  top      : 5%;
+  left     : calc(50% - 300px);
+  width    : 600px;
+  height   : 100%;
+  overflow : hidden;
+}
+
+header {
+  width      : 100%;
+  height     : 100px;
+  text-align : center;
+}
+
+header > img {
+  width : 350px;
+}
+
+.canvas {
+  display            : none;
+  width              : 550px;
+  height             : 550px;
+  margin             : 0 auto;
+  border             : 35px solid rgba(255, 255, 255, 0.5);
+  border-radius      : 20px 20px 20px 20px;
+  -webkit-transition : display 4s;
+  transition         : display 4s;
+}
+
+.box {
+  float              : left;
+  padding            : 0;
+  border             : 1px solid green;
+  background-color   : #7bbe11;
+  -webkit-transition : background-color 0.5s;
+  transition         : background-color 0.5s;
+}
+
+.box:hover {
+  background-color : #a3ce0d;
+}
+
+.gameStats {
+  display            : none;
+  width              : 100%;
+  margin-top         : 10px;
+  padding            : 0px 20px 0px 20px;
+  -webkit-transition : display 4s;
+  transition         : display 4s;
+}
+
+.playerStats {
+  display       : block;
+  width         : 48%;
+  height        : 120px;
+  float         : left;
+  margin        : 5px 5px 5px 5px;
+  padding       : 20px;
+  border        : 3px solid #166098;
+  border-radius : 20px;
+  background    : #3487c7;
+  background    : -moz-linear-gradient(bottom right, #3487c7, #15619b);
+  background    : -o-linear-gradient(bottom right, #3487c7, #15619b);
+  background    : -webkit-linear-gradient(left top, #3487c7, #15619b);
+  background    : linear-gradient(to bottom right, #3487c7, #15619b);
+}
+
+.player {
+  width         : 100%;
+  height        : 40%;
+  margin        : 0;
+  margin-bottom : 5px;
+  border-bottom : 2px solid #15619b;
+  text-align    : center;
+}
+
+.player > h3 {
+  color       : #e0e0e0;
+  font-family : 'Open Sans',
+                sans-serif;
+}
+
+.stars {
+  width      : 100%;
+  height     : 60%;
+  margin-top : -15px;
+}
+
+.stars > img {
+  height        : 95%;
+  margin-bottom : 30px;
+  padding       : 10px 5px 0px 5px;
+}
+
+#midStar {
+  height     : 110%;
+  margin-top : 10px;
+}
+
+.player > h3 {
+  margin : 0;
+}
+
+#refresh {
+  z-index            : 300;
+  position           : absolute;
+  top                : 20px;
+  right              : 20px;
+  width              : 50px;
+  opacity            : 0.5;
+  -webkit-transition : opacity 1s;
+  transition         : opacity 1s;
+}
+
+#refresh:hover {
+  opacity : 1;
+}
+
+.wrapperIntro {
+  display            : block;
+  width              : 100%;
+  height             : 75%;
+  padding            : 30px;
+  border             : 10px solid #ffbe31;
+  border-radius      : 20px;
+  background         : -moz-linear-gradient(bottom right, #298673, #09503f);
+  background         : -o-linear-gradient(bottom right, #298673, #09503f);
+  background         : -webkit-linear-gradient(left top, #298673, #09503f);
+  background         : linear-gradient(to bottom right, #298673, #09503f);
+  -webkit-transition : display 4s;
+  transition         : display 4s;
+}
+
+.wrapperIntro > p {
+  margin-bottom : 40px;
+  color         : #d6d6d6;
+  line-height   : 150%;
+}
+
+.wrapperIntro > input {
+  display          : block;
+  width            : 100%;
+  height           : 70px;
+  margin           : 25px 0px 25px 0px;
+  padding-left     : 25px;
+  color            : white;
+  border           : 0px;
+  border-radius    : 10px;
+  background-color : #3f9983;
+  text-align       : center;
+  font-size        : 1em;
+}
+
+.wrapperIntro > button {
+  width              : 60%;
+  height             : 70px;
+  color              : black;
+  border             : 0px;
+  border-radius      : 10px;
+  background-color   : #e7a922;
+  font-size          : 1.3em;
+  font-weight        : 700;
+  -webkit-transition : background-color 0.3s;
+  transition         : background-color 0.3s;
+}
+
+.wrapperIntro > button:hover {
+  background-color : #f5c764;
+}
+
+::-webkit-input-placeholder {
+  color : white;
+}
+
+::-moz-placeholder {
+  color : white;
+}
+
+:-ms-input-placeholder {
+  color : white;
+}
+
+:-moz-placeholder {
+  color : white;
+}
+
+@media screen
+       and (max-width : 550px) {
+  .wrapper {
+    z-index  : 10;
+    position : absolute;
+    top      : 0px;
+    left     : 0px;
+    width    : 100%;
+    height   : 100vh;
+  }
+
+  .canvas {
+    width         : 100%;
+    height        : 70vh;
+    margin        : 0;
+    border        : 0px;
+    border-radius : 0px;
+  }
+
+  .gameStats {
+    width      : 100%;
+    margin-top : 0px;
+    padding    : 0px;
+  }
+
+  .playerStats {
+    display       : block;
+    width         : 50%;
+    height        : 10vh;
+    float         : left;
+    margin        : 0px;
+    padding       : 20px;
+    border        : 3px solid #166098;
+    border-radius : 0px;
+    background    : #3487c7;
+    background    : -moz-linear-gradient(bottom right, #3487c7, #15619b);
+    background    : -o-linear-gradient(bottom right, #3487c7, #15619b);
+    background    : -webkit-linear-gradient(left top, #3487c7, #15619b);
+    background    : linear-gradient(to bottom right, #3487c7, #15619b);
+  }
+
+  .player {
+    height     : 4vh;
+    margin-top : -10px;
+  }
+
+  .wrapperIntro {
+    height : auto;
+  }
+
+  header > img {
+    width       : 90%;
+    padding-top : 20px;
+  }
+}
+
+.announcementHolderX {
+  z-index            : 200;
+  display            : none;
+  position           : fixed;
+  width              : 100%;
+  height             : 100%;
+  opacity            : 0.0;
+  background-color   : rgba(0, 0, 0, 0.4);
+  -webkit-transition : opacity 3s;
+  transition         : opacity 3s;
+}
+
+.announcementHolder0 {
+  z-index            : 200;
+  display            : none;
+  position           : fixed;
+  width              : 100%;
+  height             : 100%;
+  opacity            : 0.0;
+  background-color   : rgba(0, 0, 0, 0.4);
+  -webkit-transition : opacity 3s;
+  transition         : opacity 3s;
+}
+
+.announcementHolderD {
+  z-index            : 200;
+  display            : none;
+  position           : fixed;
+  width              : 100%;
+  height             : 100%;
+  opacity            : 0.0;
+  background-color   : rgba(0, 0, 0, 0.4);
+  -webkit-transition : opacity 3s;
+  transition         : opacity 3s;
+}
+
+.winnerAnnouncement {
+  position      : relative;
+  top           : 20%;
+  width         : 500px;
+  height        : 350px;
+  margin        : 0 auto;
+  padding       : 50px;
+  border-radius : 10px;
+  background    : -moz-linear-gradient(bottom right, #3487c7, #15619b);
+  background    : -o-linear-gradient(bottom right, #3487c7, #15619b);
+  background    : -webkit-linear-gradient(left top, #3487c7, #15619b);
+  background    : linear-gradient(to bottom right, #3487c7, #15619b);
+  text-align    : center;
+}
+
+.winnerAnnouncement > img {
+  width : 100px;
+}
+
+.winnerAnnouncement > h3 {
+  color     : white;
+  font-size : 2em;
+}
+
+.winnerAnnouncement > p {
+  margin-top  : -30px;
+  color       : black;
+  font-size   : 1.5em;
+  line-height : 1.5em;
+}
